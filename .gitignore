@@ -14,8 +14,10 @@ Thumbs.db
 
 # composer vendor dir
 /vendor
+!/vendor/autoload.php
 !/vendor/twbs/bootstrap/dist/
 !/vendor/yiisoft/
+/vendor/**/.git/
 
 # composer itself is not needed
 composer.phar
