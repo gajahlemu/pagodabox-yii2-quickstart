@@ -1,16 +1,21 @@
 web1:
   php_version: 5.4.14
   php_extensions:
+    - apc
+    - bz2
     - curl
     - dom
+    - fileinfo
+    - freetype
+    - gd
+    - iconv
+    - mbstring
+    - mcrypt
     - pdo
     - pdo_sqlite
     - pdo_mysql
-    - apc
-    - mcrypt
     - soap
-    - gd
-    - freetype
+    - xml
     - zip
   document_root: /web
   shared_writable_dirs:
