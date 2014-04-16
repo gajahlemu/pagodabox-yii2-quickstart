@@ -1,17 +1,20 @@
 web1:
   php_version: 5.4.14
   php_extensions:
-      - curl
-      - dom
-      - pdo
-      - pdo_sqlite
-      - pdo_mysql
-      - apc
-      - mcrypt
-      - soap
-      - gd
-      - freetype
-  document_root: /web
+    - curl
+    - dom
+    - pdo
+    - pdo_sqlite
+    - pdo_mysql
+    - apc
+    - mcrypt
+    - soap
+    - gd
+    - freetype
+  document_root: /basic/web
   shared_writable_dirs:
-      - /runtime
-      - /web/assets
+    - /basic/runtime
+    - /basic/web/assets
+  web1:
+    after_build:
+      - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar create-project yiisoft/yii2-app-basic basic 2.0.0-beta"
