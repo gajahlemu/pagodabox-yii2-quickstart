@@ -15,6 +15,5 @@ web1:
   shared_writable_dirs:
     - /basic/runtime
     - /basic/web/assets
-  web1:
-    after_build:
-      - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar create-project yiisoft/yii2-app-basic basic 2.0.0-beta"
+  after_build:
+    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar create-project yiisoft/yii2-app-basic basic 2.0.0-beta"
