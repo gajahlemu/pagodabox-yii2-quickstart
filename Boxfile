@@ -1,4 +1,8 @@
 web1:
+  apache_access_log: false
+  apache_error_log: true
+  php_error_log: true
+  php_fpm_log: true
   php_version: 5.4.14
   php_extensions:
     - apc
