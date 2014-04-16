@@ -12,9 +12,7 @@ web1:
     - gd
     - freetype
     - zip
-  document_root: /basic/web
+  document_root: /web
   shared_writable_dirs:
-    - /basic/runtime
-    - /basic/web/assets
-  after_build:
-    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar create-project yiisoft/yii2-app-basic basic 2.0.0-beta"
+    - /runtime
+    - /web/assets
