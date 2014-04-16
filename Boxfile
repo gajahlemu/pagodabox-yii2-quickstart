@@ -11,6 +11,7 @@ web1:
     - soap
     - gd
     - freetype
+    - zip
   document_root: /basic/web
   shared_writable_dirs:
     - /basic/runtime
